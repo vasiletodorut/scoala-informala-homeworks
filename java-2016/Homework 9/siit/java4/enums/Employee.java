@@ -1,4 +1,10 @@
-package enums;
+/**
+ * In the class are instantiated the employees with name, job position, worked hours, salary 
+ * and prepaid/postpaid sales.
+ */
+
+
+package siit.java4.enums;
 
 public class Employee {
 		
@@ -7,20 +13,20 @@ public class Employee {
 		String jobposition;
 		int workedhours;
 		int daysoff;
-		int noofprepaidsales;
-		int noofpostpaidsales;
+		int prepaidsales;
+		int postpaidsales;
 		int salary;
 
 	
 		public Employee(String name, String jobposition, int workedhours, int daysoff, 
-				int noofprepaidsales, int noofpostpaidsales, int salary) {
+				int prepaidsales, int postpaidsales, int salary) {
 
 			this.name = name;
 			this.jobposition = jobposition;
 			this.workedhours = workedhours;
 			this.daysoff = daysoff;
-			this.noofprepaidsales = noofprepaidsales;
-			this.noofpostpaidsales = noofpostpaidsales;
+			this.prepaidsales = prepaidsales;
+			this.postpaidsales = postpaidsales;
 			this.salary = salary;
 		}
 
@@ -29,8 +35,8 @@ public class Employee {
 		public String toString() {
 			return "Person [name=" + name + ", jobposition=" + jobposition + ","
 					+ " workedhours=" + workedhours + ","
-					+ " daysoff=" + daysoff + ", "+ "noofprepaidsales=" + noofprepaidsales + ", nrOfPostpaidSales="
-					+ noofpostpaidsales + ", salary=" + salary + "]";
+					+ " daysoff=" + daysoff + ", "+ "prepaidsales=" + prepaidsales + ","
+					+ " paidsales="	+ postpaidsales + ", salary=" + salary + "]";
 		}
 
 		
@@ -41,8 +47,8 @@ public class Employee {
 			result = prime * result + ((name == null) ? 0 : name.hashCode());
 			result = prime * result + daysoff;
 			result = prime * result + workedhours;
-			result = prime * result + noofpostpaidsales;
-			result = prime * result + noofprepaidsales;
+			result = prime * result + postpaidsales;
+			result = prime * result + prepaidsales;
 			result = prime * result + ((jobposition == null) ? 0 : jobposition.hashCode());
 			result = prime * result + salary;
 			return result;
@@ -67,9 +73,9 @@ public class Employee {
 				return false;
 			if (workedhours != other.workedhours)
 				return false;
-			if (noofpostpaidsales != other.noofpostpaidsales)
+			if (postpaidsales != other.postpaidsales)
 				return false;
-			if (noofprepaidsales != other.noofprepaidsales)
+			if (prepaidsales != other.prepaidsales)
 				return false;
 			if (jobposition == null) {
 				if (other.jobposition != null)
