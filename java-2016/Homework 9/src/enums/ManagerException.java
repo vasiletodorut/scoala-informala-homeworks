@@ -1,4 +1,4 @@
-package siit.java4.enums;
+package enums;
 
 	/**
 	 * The Class ManagerException.
