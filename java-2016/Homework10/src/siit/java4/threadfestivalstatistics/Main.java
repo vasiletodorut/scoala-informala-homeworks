@@ -9,7 +9,7 @@ public class Main {
 		FestivalStatisticsThread statsThread = new FestivalStatisticsThread(gate);
 		statsThread.start();
 
-		for (int i = 0; i < 357; i++) {
+		for (int i = 0; i < 658; i++) {
 
 			PosibleTicketsTypes ticketType = PosibleTicketsTypes.getRandomTicket();
 			FestivalAttendeeThread festivalAttendee = new FestivalAttendeeThread(ticketType, gate);
